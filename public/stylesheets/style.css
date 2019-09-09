@@ -1,0 +1,144 @@
+body {
+    padding: 0px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: #29274C
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-color: blue;
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger4.svg?color=1729B0');
+}
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+    
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: right;
+}
+
+.item5 {
+    grid-area: footer;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-areas:
+    'menu header header header header header'
+    'menu main main main main right'
+    'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: #7E52A0;
+    padding: 10px;
+    }
+
+    .grid > div {
+        background-color: #E8D2F4;
+        text-align: left;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+#sidebar {
+    color: #fff;
+    background-color: #AA80C9;
+    transition: all 0.5s;
+    min-width: 100px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color:white
+}
+
+#sidebar ul li a:hover {
+    color: #29274C;
+    background: #E8D2F4;
+}
+    
+#sidebar.active {
+    color: white;
+    margin-left: -270px;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #7E52A0;
+}
+
+.grid.active{
+    display: grid;
+    grid-template-columns: 0 auto;
+    grid-template-areas:
+    'menu header header header header header'
+    'menu main main main main right'
+    'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    }
+
+.headerimg {
+    height: auto;
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul ul a {
+    font-size: 0.9em;
+    color: white;
+    padding-left: 30px;
+    background: #7E52A0;
+}
+
+#navbar {
+    transition: all 0.5s
+}
+
+.vcentre {
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.star-rating {
+    line-height:32px;
+    font-size:1.25em;
+    cursor: pointer;
+  }
+
+  

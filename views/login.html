@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html id="page">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+</head>
+
+<body>
+    <div class="container-fluid" style="padding-left: 0px">
+        <div class="row">
+            <div class="col-md-3 col-md-3 nopadding" id="navbar">
+
+            </div>
+            <div class="col-md-9 col-md-9">
+                <div class="row">
+                    <div class="col-md-8"><img src="/images/ga2.png" class="img-fluid headerimg vcentre"></div>
+                    <div class="col-md-4"></div>
+
+
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8" style="text-align: center;">
+                        <h3>Celestial Stationery</h3>
+                        <p>Welcome to a shop full of unique stationery!</p>
+
+                    </div>
+                    <div class="col-md-4"></div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8" id="main">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 vcentre">
+                            <form>
+                                <br /> 
+                                <p style="text-align: center;" id='error_message'></p>
+                                Username: <input type="text" id="username" class="form-control" placeholder="Username">
+                                Password: <input type="password" class="form-control" placeholder="Password" id="password"> <br />
+                                <button type="button" class="btn btn-default btn-block" id="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-md-3"></div>
+
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var $ = jQuery;
+    $(document).ready(function () {
+        
+
+    });
+
+    $("#submit").on("click", function () {
+
+        $.post("/login/auth",
+            {
+                username: $("#username").val(),
+                password: $("#password").val()
+
+            }, function(data){
+                if(data=='Incorrect login details'){
+                    $('#error_message').html(data);
+                }
+                else{
+                   window.location = document.location.origin +"/admin"; 
+                }
+                
+                
+            }
+            );
+    });
+
+</script>
+
+</html>

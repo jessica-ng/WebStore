@@ -1,0 +1,30 @@
+{
+  "name": "coursework",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "circular-json": "^0.5.9",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "handlebars": "^4.0.12",
+    "http-errors": "~1.6.2",
+    "jest": "^23.6.0",
+    "morgan": "~1.9.0",
+    "mustache": "^3.0.1",
+    "node": "^11.6.0",
+    "pug": "2.0.0-beta11",
+    "supertest": "^3.4.2",
+    "test": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
