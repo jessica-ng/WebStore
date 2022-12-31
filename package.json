@@ -16,7 +16,7 @@
     "express": "~4.16.0",
     "handlebars": "^4.0.12",
     "http-errors": "~1.6.2",
-    "jest": "^23.6.0",
+    "jest": "^29.3.1",
     "morgan": "~1.9.0",
     "mustache": "^3.0.1",
     "node": "^11.6.0",
